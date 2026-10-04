@@ -1,0 +1,78 @@
+# HungerGames Plugin Configuration
+# Configuración principal del plugin
+
+# Configuración del juego
+game:
+  min-players: 2
+  max-players: 24
+  grace-period: 60          # Segundos de periodo de gracia
+  duration-minutes: 30      # Duración total de la partida
+  deathmatch-delay: 25      # Minutos antes de iniciar deathmatch
+
+# Configuración de pedestales
+pedestal:
+  rise-speed: 0.2           # Bloques por tick
+  max-height: 20            # Altura máxima
+  rise-duration: 100        # Ticks para subir (5 segundos = 100 ticks)
+
+# Configuración de patrocinio
+sponsor:
+  max-per-player: 3         # Máximo patrocinios por jugador
+  cooldown: 30              # Segundos de cooldown entre patrocinios
+  drop-height: 50           # Altura desde la que caen los items
+  drop-speed: 1.5           # Velocidad de caída
+
+# Configuración de eventos
+events:
+  auto-enabled: true        # Eventos automáticos activados
+  auto-interval: 120        # Intervalo base entre eventos automáticos (segundos)
+  min-interval: 60          # Intervalo mínimo
+  max-interval: 300         # Intervalo máximo
+
+# Configuración de bordes
+worldborder:
+  enabled: true
+  warning-distance: 5
+  damage-amount: 1
+  damage-buffer: 5
+
+# Recompensas para el ganador
+rewards:
+  winner:
+    - "ITEM:DIAMOND:64"
+    - "ITEM:ENCHANTED_GOLDEN_APPLE:4"
+    - "ITEM:NETHERITE_INGOT:8"
+    - "COMMAND:eco give %player% 10000"
+    - "COMMAND:lp user %player% permission set hungergames.winner"
+
+# Configuración de cofres iniciales
+chests:
+  enabled: true
+  refill-minutes: 10
+  items:
+    - "WOODEN_SWORD:1:100"
+    - "STONE_SWORD:1:80"
+    - "IRON_SWORD:1:30"
+    - "BOW:1:50"
+    - "ARROW:16:70"
+    - "COOKED_BEEF:8:90"
+    - "BREAD:16:80"
+    - "GOLDEN_APPLE:1:20"
+    - "IRON_PICKAXE:1:40"
+    - "IRON_AXE:1:30"
+    - "SHIELD:1:25"
+    - "ENDER_PEARL:4:15"
+    - "EXPERIENCE_BOTTLE:4:20"
+    - "FIREWORK_ROCKET:4:10"
+    - "TNT:2:10"
+    - "POTION:1:15"
+
+# Configuración de mensajes
+messages:
+  prefix: "&8[&cHungerGames&8] &r"
+  
+# Configuración de arena por defecto
+default-arena:
+  radius: 200
+  height: 100
+  deathmatch-radius: 50

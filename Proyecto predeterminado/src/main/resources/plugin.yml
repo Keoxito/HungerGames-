@@ -1,0 +1,63 @@
+name: HungerGames
+version: 1.0.0
+main: com.hungergames.HungerGamesPlugin
+api-version: 1.21
+author: TuNombre
+description: Plugin completo de Juegos del Hambre con eventos, patrocinadores, pedestales y más
+website: ""
+
+commands:
+  hg:
+    description: Comando principal de Hunger Games
+    usage: /hg <subcomando>
+    aliases: [hungergames, hgames]
+    permission: hungergames.admin
+
+  hgpedestal:
+    description: Sube el pedestal lentamente
+    usage: /hgpedestal
+    permission: hungergames.player
+
+  hgsponsor:
+    description: Abre el menú de patrocinadores
+    usage: /hgsponsor <jugador> [item]
+    permission: hungergames.sponsor
+
+  hgevent:
+    description: Item para owners - ejecutar eventos
+    usage: /hgevent
+    permission: hungergames.owner
+
+  hgstart:
+    description: Inicia los Juegos del Hambre
+    usage: /hgstart
+    permission: hungergames.admin
+
+  hgstop:
+    description: Detiene los Juegos del Hambre
+    usage: /hgstop
+    permission: hungergames.admin
+
+  hglobby:
+    description: Teletransporta al lobby
+    usage: /hglobby
+    permission: hungergames.player
+
+  hgarena:
+    description: Gestión de arenas
+    usage: /hgarena <crear|eliminar|listar|establecer>
+    permission: hungergames.admin
+
+permissions:
+  hungergames.admin:
+    description: Acceso completo de admin
+    default: op
+  hungergames.owner:
+    description: Acceso de owner (eventos especiales)
+    default: op
+  hungergames.sponsor:
+    description: Puede patrocinar tributos
+    default: true
+  hungergames.player:
+    description: Permisos básicos de jugador
+    default: true
